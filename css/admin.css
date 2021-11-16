@@ -65,17 +65,10 @@
   margin: 1%;
   padding: 2%;
   float: left;
-  border-right: 5px solid cyan;
-  border-bottom: 5px solid cyan;
+  /* border-right: 5px solid cyan; */
+  /* border-bottom: 5px solid cyan; */
 }
 
-.col-4:hover {
-  
-  border-left: 5px solid cyan;
-  border-top: 5px solid cyan;
-  border-right: none;
-  border-bottom: none;
-}
 
 .clearfix {
   float: none;

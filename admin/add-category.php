@@ -158,12 +158,12 @@
 			if ($res == true) {
 
 				//query executed and category added
-				$_SESSION['add'] = "<div class='success'>Category added successfully</div>";
+				$_SESSION['add'] = "<div class='success' data-aos='slide-left' style='position:fixed;right:200px;transition:0.3s'>Category added successfully</div>";
 				header('location:' . SITEURL . 'admin/manage-category.php');
 			} else {
 
 				//fail to add category
-				$_SESSION['add'] = "<div class='error'>Failed to add </div>";
+				$_SESSION['add'] = "<div class='error' data-aos='slide-left' style='position:fixed;right:200px;transition:0.3s'>Failed to add </div>";
 				header('location:' . SITEURL . 'admin/add-category.php');
 			}
 		}

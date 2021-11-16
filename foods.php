@@ -10,28 +10,53 @@
         <br />
         <br />
         <br />
-        <center>
-            <h5 style="color: white;font-size:30px">Search your favourite food And Enjoy your meal.</h5>
-        </center>
+        <h1 class="ml10">
+            <span class="text-wrapper">
+                <span class="letters">Order your favourite food and enjoy meal</span>
+            </span>
+        </h1>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script>
+            // Wrap every letter in a span
+            var textWrapper = document.querySelector('.ml10 .letters');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({
+                    loop: true
+                })
+                .add({
+                    targets: '.ml10 .letter',
+                    rotateY: [-90, 0],
+                    duration: 1300,
+                    delay: (el, i) => 45 * i
+                }).add({
+                    targets: '.ml10',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+        </script>
 
     </div>
 </section>
 
 <!-- <section class="filter"> -->
-    <!-- <div class="content"> -->
-        <!-- <button type="submit">filter</button> -->
-        <!-- <select name=" offers" value="offers"> -->
-            <!-- <option value="weekend">weekend</option> -->
-            <!-- <option value="Ipl offers">Ipl offer</option> -->
-            <!-- <option value="Dinner">Dinner</option> -->
-        <!-- </select> -->
+<!-- <div class="content"> -->
+<!-- <button type="submit">filter</button> -->
+<!-- <select name=" offers" value="offers"> -->
+<!-- <option value="weekend">weekend</option> -->
+<!-- <option value="Ipl offers">Ipl offer</option> -->
+<!-- <option value="Dinner">Dinner</option> -->
+<!-- </select> -->
 <!--  -->
-        <!-- <select name=" prices" value="prices"> -->
-            <!-- <option value="lower">lower</option> -->
-            <!-- <option value="higher">higher</option> -->
+<!-- <select name=" prices" value="prices"> -->
+<!-- <option value="lower">lower</option> -->
+<!-- <option value="higher">higher</option> -->
 <!--  -->
-        <!-- </select> -->
-    <!-- </div> -->
+<!-- </select> -->
+<!-- </div> -->
 <!-- </section> -->
 <!-- fOOD sEARCH Section Ends Here -->
 
@@ -57,7 +82,7 @@
                 $image_name = $row['image_name'];
         ?>
                 <div class="food-menu-box" data-aos="fade-in">
-                <!-- data-aos="fade-in" -->
+                    <!-- data-aos="fade-in" -->
                     <div class="food-menu-img">
                         <?php
 
@@ -95,23 +120,6 @@
 
 
         ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <div class="clearfix"></div>

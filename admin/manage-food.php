@@ -73,7 +73,7 @@
 			<br />
 			<br />
 
-			<table class="tbl-full"  >
+			<table class="tbl-full">
 				<tr>
 					<th>S.NO</th>
 					<th>Title</th>
@@ -109,7 +109,7 @@
 
 				?>
 						<tr>
-							<td ><?php echo $sn++; ?></td>
+							<td><?php echo $sn++; ?></td>
 							<td><?php echo $title ?></td>
 							<td style="width: 250px"><?php echo $description ?></td>
 							<td>Rs. <?php echo $price ?></td>
@@ -132,7 +132,7 @@
 
 								?>
 							</td>
-							<td ><?php echo $featured ?></td>
+							<td><?php echo $featured ?></td>
 							<td><?php echo $active ?></td>
 							<td>
 								<a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id ?>" class="btn-secondary">Update Food</a>
@@ -150,21 +150,6 @@
 
 
 				?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 			</table>

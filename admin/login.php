@@ -86,14 +86,14 @@ if (isset($_POST['submit'])) {
 	if ($count == 1) {
 		//user avaialable and login success
 
-		$_SESSION['login'] = "<div class='success text-center'>Login SuccessFully</div>";
+		$_SESSION['login'] = "<div  class='success' data-aos='slide-left' style='position:fixed;right:200px;transition:0.5s;margin-top:-50px'>Login SuccessFully</div>";
 
 		$_SESSION['user'] = $username; //to chake whether the user is loged in or not
 		header('location:' . SITEURL . 'admin/');
 	} else {
 
 		//user not available
-		$_SESSION['login'] = "<div class='error text-center'>Login Error please try again</div>";
+		$_SESSION['login'] = "<div  class='error' >Login Error please try again</div>";
 		header('location:' . SITEURL . 'admin/login.php');
 	}
 }

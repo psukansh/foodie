@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Rubik:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/spf logo.jpg" >
     <head>
 </head>
 
@@ -27,8 +28,8 @@
         <div class="container" style="display: flex;">
             <div class="logo">
                 <a href="<?php echo SITEURL; ?>" title="Logo" style="display: flex;justify-content:center;align-items:center">
-                    <img src="https://thumbs.dreamstime.com/b/food-logo-smile-label-company-grocery-store-friendly-vector-illustration-smiling-mouth-symbol-135565322.jpg" alt="Restaurant Logo" class="img-responsive" width="50px" height="50px">
-                    <h3>SPFfood</h3>
+                    <!-- <img src="images/spf logo.jpg" alt="Restaurant Logo" class="img-responsive" width="40px" height="40px"> -->
+                    <h3 style="font-size: 25px;margin-left:10px">SPFfood</h3>
                 </a>
             </div>
 

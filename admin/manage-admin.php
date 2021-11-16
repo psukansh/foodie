@@ -21,53 +21,53 @@
 			<br />
 			<br />
 
-			<?php 
+			<?php
 
 			if (isset($_SESSION['add'])) {
 
-				echo $_SESSION['add'];// displatying session message
+				echo $_SESSION['add']; // displatying session message
 
 				unset($_SESSION['add']); //removing session message
 			}
 
 			if (isset($_SESSION['delete'])) {
 
-				echo $_SESSION['delete'];// displatying session message
-                unset($_SESSION['delete']); //removing session message
-				
+				echo $_SESSION['delete']; // displatying session message
+				unset($_SESSION['delete']); //removing session message
+
 			}
 
 			if (isset($_SESSION['update'])) {
-				echo $_SESSION['update'];// displatying session message
+				echo $_SESSION['update']; // displatying session message
 				unset($_SESSION['update']); //removing session message
-				
+
 			}
 
 			if (isset($_SESSION['user-not-found'])) {
-				echo $_SESSION['user-not-found'];// displatying session message
+				echo $_SESSION['user-not-found']; // displatying session message
 				unset($_SESSION['user-not-found']); //removing session message
-				
+
 			}
 
 			if (isset($_SESSION['password-not-match'])) {
-				echo $_SESSION['password-not-match'];// displatying session message
+				echo $_SESSION['password-not-match']; // displatying session message
 				unset($_SESSION['password-not-match']); //removing session message
-				
+
 			}
 
 			if (isset($_SESSION['change-pwd'])) {
-				echo $_SESSION['change-pwd'];// displatying session message
+				echo $_SESSION['change-pwd']; // displatying session message
 				unset($_SESSION['change-pwd']); //removing session message
-				
+
 			}
 
 			if (isset($_SESSION['change-not-pwd'])) {
-				echo $_SESSION['change-not-pwd'];// displatying session message
+				echo $_SESSION['change-not-pwd']; // displatying session message
 				unset($_SESSION['change-not-pwd']); //removing session message
-				
+
 			}
-						
-			
+
+
 			?>
 			<br />
 			<br />
@@ -88,94 +88,57 @@
 				</tr>
 
 
-				<?php 
+				<?php
 
 
-				$sql="SELECT * FROM tbl_admin";
-				$res=mysqli_query($conn,$sql);
+				$sql = "SELECT * FROM tbl_admin";
+				$res = mysqli_query($conn, $sql);
 
-				if ($res==true) {
+				if ($res == true) {
 					//count rows to chake whether we have data and datbase
-					$rows=mysqli_num_rows($res); ///get all the rows from database
-					$sn=1;
+					$rows = mysqli_num_rows($res); ///get all the rows from database
+					$sn = 1;
 
-					if ($rows>0) {
+					if ($rows > 0) {
 
 						//we have database
-						while ($rows=mysqli_fetch_assoc($res)) {
+						while ($rows = mysqli_fetch_assoc($res)) {
 							//using while loop to get all the data from database
 							//And while loop will executw as long as we have the data
 
-							$id=$rows['id'];
-							$full_name=$rows['full_name'];
-							$username=$rows['username'];
+							$id = $rows['id'];
+							$full_name = $rows['full_name'];
+							$username = $rows['username'];
 
 							//display the values in table
-							?>
+				?>
 
 
-				<tr>
-					<td><?php echo $sn++?></td>
-					<td><?php echo $full_name ?></td>
-					<td><?php echo $username ?></td>
-					<td>
-						<a href="<?php echo SITEURL; ?>admin/update-password.php?id=<?php echo $id;?>" class="btn-primary">Change password</a>
-						<a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id;?>" class="btn-secondary">Update admin</a>
-						<a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>"class="btn-danger">Delete admin</a>
-					</td>
-				</tr>
+							<tr>
+								<td><?php echo $sn++ ?></td>
+								<td><?php echo $full_name ?></td>
+								<td><?php echo $username ?></td>
+								<td>
+									<a href="<?php echo SITEURL; ?>admin/update-password.php?id=<?php echo $id; ?>" class="btn-primary">Change password</a>
+									<a href="<?php echo SITEURL; ?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update admin</a>
+									<a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete admin</a>
+								</td>
+							</tr>
 
 
 
 
 				<?php
 						}
-						
-					}else{
+					} else {
 
 						//we dont have database
 
 					}
-
 				}
-				
-				
+
+
 				?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 			</table>
 

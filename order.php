@@ -70,7 +70,7 @@ if (isset($_GET['food_id'])) {
                     <!-- <br /> -->
                     <!-- <br /> -->
 
-                    <div class="order-label">Quantity</div>
+                    <div class="order-label" style="color: black;">Quantity</div>
                     <input type="number" name="qty" class="input-responsive" value="1" required>
                     <br />
                     <br />
@@ -155,10 +155,10 @@ if (isset($_GET['food_id'])) {
             $res2 = mysqli_query($conn, $sql2);
 
             if ($res2 == true) {
-                $_SESSION['order'] = "<div style='color:white;text-align:center;padding:10px;border-radius:20px;background-color:green'>Order placed successfully</div>";
+                $_SESSION['order'] = "<div data-aos='slide-left' style='position:fixed;top:200px;right:200px;transition:0.3s;background-color:yellowgreen;border-radius:25px;color:white;padding:10px'>Ur order has placed</div>";
                 echo ("<script>location.href = '" . SITEURL . "index.php?msg=review';</script>");
             } else {
-                $_SESSION['order'] = "<div style='color:red'>Failed to order</div>";
+                $_SESSION['order'] = "<div  data-aos='slide-left' style='position:fixed;top:200px;right:200px;transition:0.3s;background-color:red;border-radius:25px;color:white;padding:10px'>Failed to order</div>";
                 echo ("<script>location.href = '" . SITEURL . "index.php?msg=review';</script>");
             }
         }
@@ -170,3 +170,15 @@ if (isset($_GET['food_id'])) {
 </section>
 <!-- fOOD sEARCH Section Ends Here -->
 <?php include('partials-front/footer.php') ?>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 200, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 700, // values from 0 to 3000, with step 50ms
+        easing: 'ease',
+    });
+</script>
+
+<script src="js/index.js"></script>

@@ -14,6 +14,8 @@ include('login-check.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food order Website - Home page</title>
 	<link rel="stylesheet" href="../css/admin.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="icon" href="../../images/spf logo.jpg">
 </head>
 
 <body>

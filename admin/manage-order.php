@@ -17,9 +17,9 @@
 	<div class="main-content">
 		<div class="wrapper">
 			<h1>Manage Order</h1>
-			<br/>
-			<br/>
-			<br/>
+			<br />
+			<br />
+			<br />
 
 			<?php
 
@@ -28,7 +28,7 @@
 				unset($_SESSION['update']);
 			}
 			?>
-			
+
 
 
 
@@ -57,7 +57,7 @@
 				$res = mysqli_query($conn, $sql);
 
 				$count = mysqli_num_rows($res);
-				$sn=1;
+				$sn = 1;
 
 				if ($count > 0) {
 
@@ -74,7 +74,7 @@
 						$customer_email = $row['customer_email'];
 						$customer_address = $row['customer_address'];
 				?>
-						<tr >
+						<tr>
 							<td style="font-size: 13px;"><?php echo $sn++; ?></td>
 							<td style="font-size: 13px;"><?php echo $food; ?></td>
 							<td style="font-size: 13px;"><?php echo $price; ?></td>
@@ -82,24 +82,19 @@
 							<td style="font-size: 13px;"><?php echo $total; ?></td>
 							<td style="font-size: 13px;"><?php echo $order_date; ?></td>
 
-							<td style="font-size: 13px;"><?php  
-							
-							if ($status=="Ordered") {
-								echo "<label>$status</label>";
-							} 
-							elseif ($status=="On Delivery"){
-								echo "<label style='color:orange'>$status</label>";
+							<td style="font-size: 13px;"><?php
 
-							}
-							elseif ($status=="Delivered"){
-								echo "<label style='color:yellowgreen'>$status</label>";
+															if ($status == "Ordered") {
+																echo "<label>$status</label>";
+															} elseif ($status == "On Delivery") {
+																echo "<label style='color:orange'>$status</label>";
+															} elseif ($status == "Delivered") {
+																echo "<label style='color:yellowgreen'>$status</label>";
+															} elseif ($status == "Cancelled") {
+																echo "<label style='color:red'>$status</label>";
+															}
 
-							}
-							elseif ($status=="Cancelled"){
-								echo "<label style='color:red'>$status</label>";
-							}
-							
-							?></td>
+															?></td>
 
 							<td style="font-size: 13px;"><?php echo $customer_name; ?></td>
 							<td style="font-size: 13px;"><?php echo $customer_contact; ?></td>
@@ -123,28 +118,6 @@
 				}
 
 				?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 			</table>
 

@@ -40,11 +40,11 @@ $res =mysqli_query($conn,$sql);
 
 if ($res==true) {
 
-	$_SESSION['delete']="<div class='success'>Deleted successfully</div>";
+	$_SESSION['delete']="<div class='success' data-aos='slide-left' style='position:fixed;right:200px;transition:0.3s'>Deleted successfully</div>";
 	header('location:'.SITEURL.'admin/manage-category.php');
 }else{
 
-	$_SESSION['delete']="<div class='error'>Couldn't be deleted</div>";
+	$_SESSION['delete']="<div class='error' data-aos='slide-left' style='position:fixed;right:200px;transition:0.3s'>Couldn't be deleted</div>";
     header('location:'.SITEURL.'admin/manage-category.php');
 }
 

@@ -68,7 +68,7 @@
 			<br />
 
 
-			<table class="tbl-full" >
+			<table class="tbl-full">
 				<tr>
 					<th>S.NO</th>
 					<th>Title</th>
@@ -104,7 +104,7 @@
 				?>
 						<tr>
 							<td><?php echo $sn++ ?></td>
-							<td ><?php echo $title ?></td>
+							<td><?php echo $title ?></td>
 							<td>
 								<?php
 								if ($image_name != "") {
@@ -121,8 +121,8 @@
 								?>
 
 							</td>
-							<td ><?php echo $featured ?></td>
-							<td ><?php echo $active ?></td>
+							<td><?php echo $featured ?></td>
+							<td><?php echo $active ?></td>
 							<td>
 								<a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
 								<a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
@@ -153,21 +153,6 @@
 					?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 					</tr>
 
 			</table>
@@ -178,3 +163,12 @@
 	</div>
 
 	<?php include('partial/footer.php') ?>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200, // offset (in px) from the original trigger point
+			delay: 0, // values from 0 to 3000, with step 50ms
+			duration: 300, // values from 0 to 3000, with step 50ms
+			easing: 'ease-in',
+		});
+	</script>

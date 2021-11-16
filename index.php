@@ -10,6 +10,11 @@ if (isset($_SESSION['order'])) {
     unset($_SESSION['order']);
 }
 
+if (isset($_SESSION['notify'])) {
+    echo $_SESSION['notify'];
+    unset($_SESSION['notify']);
+}
+
 
 
 
@@ -59,7 +64,7 @@ if (isset($_SESSION['order'])) {
                     <!-- <button type="submit" class="home-button">Order Now</button> -->
                 </div>
                 <div class="images">
-                    <img src="./images/about real.png">
+                    <!-- <img src="./images/beef salad.png"> -->
 
                 </div>
             </div>
@@ -67,10 +72,11 @@ if (isset($_SESSION['order'])) {
     </div>
 </div>
 
-<div class="about" style="width: 100%;height:100vh;">
+<div class="about" style="width: 100%;">
     <div class="content" style="width: 100%;height:600px;display:flex;justify-content:center;align-items:center">
         <div class="info-one" style="width: 10%;margin-bottom:100px;">
-            <h1 style="font-size: 50px;">Introducing SPFfood</h1>
+            <h1 style="font-size: 50px;color:blueviolet;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);">Introducing SPFfood</h1>
         </div>
         <br />
         <div class="image" style="width: 30%;margin-right:200px">
@@ -78,30 +84,63 @@ if (isset($_SESSION['order'])) {
         </div>
         <br>
         <div class="info-two" style="width: 30%;margin-top:100px;">
-            <h1 style="font-size: 50px;">the one-stop-shop for timely food deliveries.</h1>
+            <h1 style="font-size: 50px;color:blueviolet;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);">the one-stop-shop for timely food deliveries.</h1>
         </div>
     </div>
-    <p style="text-align:center;color:black">Because food tastes best when it's on time!</p>
+    <p style="text-align:center;color:black;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);">Because food tastes best when it's on time!</p>
 </div>
-<!-- <br /> -->
-<!-- <br /> -->
-<!-- <br /> -->
-<!-- <br /> -->
-<!-- <br /> -->
-<!-- <br /> -->
-<section class="food-search text-center">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<section class="food-search">
     <div class="container">
 
         <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-            <input type="search" style="width: 600px;border-radius:5px" name="search" placeholder="Search for Food.." required>
+            <input type="search" class="food-search-input" name="search" placeholder="Search for Food.." required>
             <input type="submit" name="submit" value="Search" class="btn btn-primary">
         </form>
         <br />
         <br />
         <br />
-        <center>
-            <h5 style="color: white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size:40px;font-weight:bold">Search your favourite food <br /> And Enjoy your meal.</h5>
-        </center>
+        <h1 class="ml7">
+            <span class="text-wrapper">
+                <span class="letters" style="text-align: center;"> Order your favourite food and enjoy meal</span>
+            </span>
+        </h1>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+        <script>
+            // Wrap every letter in a span
+            var textWrapper = document.querySelector('.ml7 .letters');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({
+                    loop: true
+                })
+                .add({
+                    targets: '.ml7 .letter',
+                    translateY: ["1.1em", 0],
+                    translateX: ["0.55em", 0],
+                    translateZ: 0,
+                    rotateZ: [180, 0],
+                    duration: 750,
+                    easing: "easeOutExpo",
+                    delay: (el, i) => 50 * i
+                }).add({
+                    targets: '.ml7',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+            // 
+        </script>
 
 
 
@@ -120,7 +159,11 @@ if (isset($_SESSION['order'])) {
 
 <br />
 <section class="categories">
-    <h2 class="text-center">Explore Foods</h2>
+    <div class="header-main">
+        <img src="images/icon.png" alt="" srcset="">
+        <h2 class="text-center" style="margin: 10px;" style="color: blueviolet;">Explore Foods</h2>
+    </div>
+
 
     <div class="container" style="border-radius:10px;display:flex;flex-wrap:wrap;">
 
@@ -191,7 +234,7 @@ if (isset($_SESSION['order'])) {
 <!-- Categories Section Ends Here -->
 <br />
 
-<section class="food-banners" style="display: flex;">
+<section class="food-banners">
     <!-- <div class="content" style="width: 100%;height:500px;display:flex;justify-content:center;align-items:center"> -->
     <!-- <img src="images/snacks.jpg" alt="" srcset="" width="1000px" height="500px"> -->
     <!-- </div> -->
@@ -359,6 +402,70 @@ if (isset($_SESSION['order'])) {
     </p>
 </section>
 
+<section class="popular-food">
+    <br />
+    <br />
+    <h2 style="color: white;text-align:center">Popular Foods</h2>
+    <br />
+    <center>
+        <p style="color:white">Eating healthy food fills your body with energy and nutrients,Imagine your cells smiling back at you and saying 'Thank you'</p>
+    </center>
+    <div class="content">
+        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=51">
+            <div class="image-content" style="background-color: white;padding:8px;border-radius:4px;display:flex;width:300px;height:200px;cursor:pointer">
+                <img src="images/pizza/paneer-pizza.jpg" alt="" width="200px" height="200px">
+                <div class="info" style="margin-left:10px">
+                    <h3>Burger</h3>
+                    <p style="color: gray;margin-left:10px">Hello everyone this is sukansh pendor</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=57" style="margin: 20px;">
+            <div class="image-content" style="background-color: white;padding:8px;border-radius:4px;display:flex;width:300px;height:200px;cursor:pointer">
+                <img src="images/snacks.jpg" alt="" width="200px" height="200px">
+                <div class="info" style="margin-left:10px">
+                    <h3>Snacks</h3>
+                    <p style="color: gray;margin-left:10px">Hello everyone this is sukansh pendor</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=51" style="margin: 20px;">
+            <div class="image-content" style="background-color: white;padding:8px;border-radius:4px;display:flex;width:300px;height:200px;cursor:pointer">
+                <img src="images/pizza/paneer-pizza.jpg" alt="" width="200px" height="200px">
+                <div class="info" style="margin-left:10px">
+                    <h3>Burger</h3>
+                    <p style="color: gray;margin-left:10px">Hello everyone this is sukansh pendor</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=51">
+            <div class="image-content" style="background-color: white;padding:8px;border-radius:4px;display:flex;width:300px;height:200px;cursor:pointer">
+                <img src="images/pizza/paneer-pizza.jpg" alt="" width="200px" height="200px">
+                <div class="info" style="margin-left:10px">
+                    <h3>Burger</h3>
+                    <p style="color: gray;margin-left:10px">Hello everyone this is sukansh pendor</p>
+                </div>
+            </div>
+        </a>
+
+
+
+
+
+
+
+
+
+    </div>
+</section>
+
+<br />
+<br />
+<br />
+<br />
 
 <div class="chefs" id="chefs">
     <div class="content">
@@ -369,14 +476,20 @@ if (isset($_SESSION['order'])) {
             <p>We present the best chefs to cook your food to make
                 the food taste extraordinary</p>
             <div class="check-circle" style="display: flex;flex-wrap:wrap;width:700px">
-                <p>A guarenteed delicious meal</p>
-                <p>Food is guarenteed hygenic</p>
-                <p>Cooked quickly</p>
-                <p>Delivery on time</p>
+                <ul>
+                    <li>A guarenteed delicious meal</li>
+                    <li>Food is guarenteed hygenic</li>
+                    <li>Cooked quickly</li>
+                    <li>Delivery on time</li>
+                </ul>
+
+
+
+
             </div>
         </div>
         <div class="image">
-            <img src="./images/chef.png" alt="" srcset="" style="background-color: white;">
+            <img src="./images/Chef.gif" alt="" srcset="">
         </div>
     </div>
 </div>
@@ -413,6 +526,8 @@ if (isset($_SESSION['order'])) {
 
     <form action="" method="POST" style="margin: 20px;">
 
+
+
         <h2 style="color: black;">Add review <i class="fas fa-comments"></i> </h2>
 
         <div class="review-content">
@@ -448,6 +563,7 @@ if (isset($_SESSION['order'])) {
 
 if (isset($_POST['submit'])) {
     $full_name = $_POST['full_name'];
+
     $comment = $_POST['comment'];
     $email = $_POST['email'];
     $date_time = date('Y-m-d');
@@ -463,25 +579,25 @@ if (isset($_POST['submit'])) {
     if ($res5 == true) {
         ///added to database 
         //but its commented now
-        echo " Added to database";
-        echo ("<script>location.href = '" . SITEURL . "index.php?msg=review';</script>");
+        $_SESSION['notify'] = "<div data-aos='slide-left' style='position:fixed;top:200px;right:200px;transition:0.3s;background-color:yellowgreen;border-radius:25px;color:white;padding:10px'>Review Added</div>";
+        echo ("<script>location.href = '" . SITEURL . "index.php</script>");
     } else {
-        echo "failed to added to database";
-        echo ("<script>location.href = '" . SITEURL . "index.php?msg=review';</script>");
+        $_SESSION['notify'] = "<div data-aos='fade-in' style='background-color:red;color:black;position:fixed;right:200px;top-300px;transition:0.3s'>Review not Added</div>";
+        echo ("<script>location.href = '" . SITEURL . "index.php</script>");
     }
 }
 
 
 ?>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="content" style="display: flex;flex-direction:column;justify-content:center;align-items:center;flex-wrap:wrap;">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="content" style="display: flex;flex-direction:column;justify-content:center;align-items:center;flex-wrap:wrap;;padding:30px;">
 
-    <h2 style="color: black;">What our customers say <img src="images/chat.png" alt="" srcset="" width="40px" height="40px"> </h2>
+    <h2 style="color: black;margin:10px">What our customers say <img src="images/Conversation.gif" alt="" srcset="" width="100px" height="100px"> </h2>
     <div class="content-content" style="display: flex;flex-wrap:wrap;padding:20px;justify-content:center;align-items:center">
         <?php
 
@@ -494,6 +610,7 @@ if (isset($_POST['submit'])) {
             while ($row6 = mysqli_fetch_assoc($res6)) {
                 $id = $row6['id'];
                 $full_name = $row6['full_name'];
+
                 $comment = $row6['comment'];
                 $email = $row6['email'];
                 $date_time = $row6['date_time'];
@@ -506,20 +623,25 @@ if (isset($_POST['submit'])) {
 
                 <div class="content-review-section">
 
-                    <div class="review-section" class="hvr-grow" style="background-color:white;width: 400px;padding:10px;border-top-right-radius: 0px;border-top-left-radius: 26px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;box-shadow: rgba(139, 134, 134, 0.377) 0px 8px 24px;float:left;margin:10px;" data-aos="fade-in">
+                    <div class="review-section" id="review-section" style="padding:10px;float:left;margin:10px; background-color: rgb(49, 49, 49);">
 
                         <div class="image-name" style="display: flex;justify-content:left;align-items:left">
-                            <img src="./images/chef.png" alt="" width="40px" height="40px" style="background-color: black;border-radius:50%">
-                            <div style="display: flex;flex-direction:column">
-                                <h3 style="padding: 0px 10px;font-family: 'Festive', cursive;font-size :30px;"><?php echo $full_name ?></h3>
-                                <p style="color: gray;font-size:10px;margin-left:20px"><?php echo $date_time; ?></p>
+                            <i class="fas fa-user-circle" style="font-size:30px;color: white;"></i>
+                            <div style="display: flex;flex-direction:column;width:80%">
+                                <h3 style="padding: 0px 10px;font-size :17px;color:white"><?php echo $full_name ?></h3>
+
                             </div>
 
 
+
                         </div>
-                        <div class="comment" style="margin:20px 0px;margin-left:50px">
-                            <p style="width: 250px;padding:10px;font-family:Arial, Helvetica, sans-serif"><?php echo $comment ?>...</p>
+                        <div class="comment" style="margin:20px 0px;margin-left:50px;display:flex">
+
+                            <p style="margin-left:50px;width: 250px;padding:10px;font-family:Arial, Helvetica, sans-serif;"><?php echo $comment ?>...</p>
+                            <img src="./images/comments.png" alt="" width="80px" height="80px" style="transform: rotate(0deg);opacity:1;">
+
                         </div>
+                        <p style="color: gray;font-size:10px;margin-left:20px"><?php echo $date_time; ?></p>
                     </div>
                 </div>
         <?php
@@ -599,7 +721,7 @@ if (isset($_POST['submit'])) {
         </div>
 
         <div class="list">
-            <li><a href="">Pandharkawada (Kelapur)</a></li>
+            <li><a href="">Kelapur</a></li>
             <li><a href="">Pusad</a></li>
             <li><a href="">Ralegaon</a></li>
             <li><a href="">Zari Jamani</a></li>
@@ -646,7 +768,6 @@ if (isset($_POST['submit'])) {
 
 
 
-
 <?php include('partials-front/footer.php') ?>
 <!-- fOOD Menu Section Ends Here -->
 
@@ -659,3 +780,5 @@ if (isset($_POST['submit'])) {
         easing: 'ease',
     });
 </script>
+
+<script src="js/index.js"></script>

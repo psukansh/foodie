@@ -186,11 +186,11 @@
 			$res2 = mysqli_query($conn, $sql2);
 
 			if ($res2 == true) {
-				$_SESSION['update'] = "<div class='success'>Category Updated successfully</div>";
+				$_SESSION['update'] = "<div class='success' data-aos='slide-left' style='position:fixed;right:200px;transition:0.3s'>Category Updated successfully</div>";
 				header('location:' . SITEURL . 'admin/manage-category.php');
 			} else {
 
-				$_SESSION['update'] = "<div class='error'>Failed to update Category</div>";
+				$_SESSION['update'] = "<div class='error' data-aos='slide-left' style='position:fixed;right:200px;transition:0.3s'>Failed to update Category</div>";
 				header('location:' . SITEURL . 'admin/manage-category.php');
 			}
 		}

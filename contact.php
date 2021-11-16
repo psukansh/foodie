@@ -17,7 +17,7 @@
 				<br />
 				<h3>Sukansh Pendor</h3>
 				<br />
-				<p style="color: gray;">Hello Guys this is sukansh pendor</p>
+				<p style="color: white;font-weight:normal">Hello Guys this is sukansh pendor</p>
 				<br />
 				<a href="mailto:psukansh@gmail.com">psukansh@gmail.com <span style="font-size: 20px;"> > </span> </a> <br>
 			</div>
@@ -27,7 +27,7 @@
 				<br />
 				<h3>Pavan Torkad</h3>
 				<br />
-				<p style="color: gray;">Hello Guys this is Pavan Torkad</p>
+				<p style="color: white;font-weight:normal">Hello Guys this is Pavan Torkad</p>
 				<br />
 				<a href="mailto:psukansh@gmail.com">psukansh@gmail.com <span style="font-size: 20px;"> > </span> </a> <br>
 			</div>
@@ -37,7 +37,7 @@
 				<br />
 				<h3>Faisal Malik</h3>
 				<br />
-				<p style="color: gray;">Hello Guys this is Faisal Malik</p>
+				<p style="color: white;font-weight:normal">Hello Guys this is Faisal Malik</p>
 				<br />
 				<a href="mailto:psukansh@gmail.com">psukansh@gmail.com <span style="font-size: 20px;"> > </span> </a> <br>
 			</div>

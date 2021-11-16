@@ -14,7 +14,7 @@
 
         ?>
 
-        <h2 style="color: white;">Foods on Your Search <a href="#" style="color: rgb(0, 255, 149);"> " <?php echo $search; ?> "</a></h2>
+        <h2 style="color: white;">Hey.... here's your search for <a href="#" style="color: rgb(0, 255, 149);"> " <?php echo $search; ?> "</a></h2>
 
     </div>
 </section>
@@ -41,7 +41,7 @@
 <!-- fOOD MEnu Section Starts Here -->
 <section class="food-menu">
     <div class="container">
-        <h2 class="text-center">Food Menu</h2>
+        <!-- <h2 class="text-center">Food Menu</h2> -->
         <?php
 
 
@@ -94,7 +94,7 @@
         } else {
 
             ?>
-            <center><img src="error1.png" alt="" srcset="" width="400px" height="400px"></center>
+            <center><img src="images/404 Error.gif" alt="" srcset="" width="400px" height="400px"></center>
 
         <?php
 
@@ -110,6 +110,12 @@
 
 
     </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
 </section>
 <!-- fOOD Menu Section Ends Here -->
