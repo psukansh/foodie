@@ -8,7 +8,7 @@ session_start();
 
 
 //execute query and save data into database
-define('SITEURL','http://localhost:81/food-order/');
+define('SITEURL','http://localhost:80/food-order/');
 define('LOCALHOST','localhost');
 define('DB_USERNAME','root');
 define('DB_PASSWORD','');
