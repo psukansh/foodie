@@ -75,6 +75,7 @@
 					<th>Image</th>
 					<th>Featured</th>
 					<th>Active</th>
+					<th>Actions</th>
 				</tr>
 
 

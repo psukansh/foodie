@@ -2,6 +2,9 @@
 include('../config/constants.php')
 
 ?>
+<br/>
+<br/>
+<br/>
 
 
 
@@ -16,9 +19,9 @@ include('../config/constants.php')
 	<link rel="stylesheet" href="../css/admin.css">
 </head>
 
-<body style="background-image:url('https://images.unsplash.com/photo-1597291512790-e6895d5b46e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80');background-size:100% 100vh;background-repeat:no-repeat">
+<body >
 
-	<div class="login" style=" background-image:linear-gradient(120deg,rgb(255, 100, 255),rgb(0, 56, 88));color:white">
+	<div class="login" style=" border:1px solid gray;color:black">
 		<div class="head">
 			<img src="../images/logo1.png" alt="" srcset="" width="100px" height="100px">
 		<h1 class="text-center">Login </h1>

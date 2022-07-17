@@ -22,12 +22,34 @@ if (isset($_SESSION['notify'])) {
 <br />
 <br />
 
+<div class="social-nav-content">
+    <div class="social-nav-content-content">
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/sukansh_at__27/"><i class="fab fa-instagram"></i>Instagram</a>
+            </li>
+            <li>
+                <a href=""><i class="fab fa-facebook"></i>Facebook</a>
+            </li>
+            <li>
+                <a href=""><i class="fab fa-twitter"></i>Twitter</a>
+            </li>
+            <li>
+                <a href="https://github.com/psukansh"><i class="fab fa-github"></i>Github</a>
+            </li>
+            <li>
+                <a href=""><i class="fab fa-linkedin"></i>Linkedin</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <div class="home_page">
     <div class="content">
         <div class="homepage">
             <div class="content">
                 <div class="info">
-                    <h1 style="font-family: 'NUnito', sans-serif;font-weight:bold;font-size:40px">Healthy <span style="color: whitesmoke;font-family: 'NUnito', sans-serif;">Food</span>
+                    <h1 style="font-family: 'Bebas Neue', cursive; font-weight:bold;font-size:50px">Healthy <span style="color: red;font-family: 'Oswald', sans-serif;">Food</span>
                         to live Healthier life
                         in the future</h1>
                     <p>Enjoy a healthy life by eating healthy foods that
@@ -37,34 +59,38 @@ if (isset($_SESSION['notify'])) {
                     <br />
                     <br />
                     <br />
-                    <div class="home-social">
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <div class="line"></div>
-                            <li>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                            </li>
-                            <div class="line"></div>
-                            <li>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </li>
-                            <div class="line"></div>
-                            <li>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                            </li>
-                            <div class="line"></div>
-                            <li>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                        </ul>
+                    <!-- <div class="home-social"> -->
+                    <!-- <ul> -->
+                    <!-- <li> -->
+                    <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+                    <!-- </li> -->
+                    <!-- <div class="line"></div> -->
+                    <!-- <li> -->
+                    <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+                    <!-- </li> -->
+                    <!-- <div class="line"></div> -->
+                    <!-- <li> -->
+                    <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                    <!-- </li> -->
+                    <!-- <div class="line"></div> -->
+                    <!-- <li> -->
+                    <!-- <a href="#"><i class="fab fa-github"></i></a> -->
+                    <!-- </li> -->
+                    <!-- <div class="line"></div> -->
+                    <!-- <li> -->
+                    <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                    <!-- </li> -->
+                    <!-- </ul> -->
 
-                    </div>
+                    <!-- </div> -->
                     <!-- <button type="submit" class="home-button">Order Now</button> -->
                 </div>
                 <div class="images">
-                    <!-- <img src="./images/beef salad.png"> -->
+                    <form action="<?php echo SITEURL; ?>food-search.php" method="POST" class="food-search-input">
+                        <input type="search" class="food-search-input" name="search" placeholder="Search for Food.." required>
+                        <input type="submit" name="submit" value="Search" class="btn btn-primary">
+                    </form>
+                    <h6 style="color: white;font-size:18px;margin:20px 0px">Search your favourite food</h6>
 
                 </div>
             </div>
@@ -76,7 +102,7 @@ if (isset($_SESSION['notify'])) {
     <div class="content" style="width: 100%;height:600px;display:flex;justify-content:center;align-items:center">
         <div class="info-one" style="width: 10%;margin-bottom:100px;">
             <h1 style="font-size: 50px;color:blueviolet;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);">Introducing SPFfood</h1>
+    0px -4px 10px rgba(255,255,255,0.3);">INTRODUCING SPFfood</h1>
         </div>
         <br />
         <div class="image" style="width: 30%;margin-right:200px">
@@ -85,7 +111,7 @@ if (isset($_SESSION['notify'])) {
         <br>
         <div class="info-two" style="width: 30%;margin-top:100px;">
             <h1 style="font-size: 50px;color:blueviolet;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);">the one-stop-shop for timely food deliveries.</h1>
+    0px -4px 10px rgba(255,255,255,0.3);">THE TOP ONE-STOP-SHOP FOR TIMELY FOOD DEVIVERIES.</h1>
         </div>
     </div>
     <p style="text-align:center;color:black;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
@@ -100,7 +126,7 @@ if (isset($_SESSION['notify'])) {
 <section class="food-search">
     <div class="container">
 
-        <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+        <form action="<?php echo SITEURL; ?>food-search.php" method="POST" class="food-search-input">
             <input type="search" class="food-search-input" name="search" placeholder="Search for Food.." required>
             <input type="submit" name="submit" value="Search" class="btn btn-primary">
         </form>
@@ -157,11 +183,10 @@ if (isset($_SESSION['notify'])) {
 
 
 
-<br />
-<section class="categories">
+<section class="categories" style="background-color: rgb(236, 236, 236);">
     <div class="header-main">
         <img src="images/icon.png" alt="" srcset="">
-        <h2 class="text-center" style="margin: 10px;" style="color: blueviolet;">Explore Foods</h2>
+        <h2 class="text-center" style="margin: 10px;color:blueviolet" style="color: blueviolet;">Explore Foods</h2>
     </div>
 
 
@@ -228,7 +253,7 @@ if (isset($_SESSION['notify'])) {
     <br />
     <br />
     <br />
-    <h4 style="text-align:center;">Nothing brings people together like food</h4>
+    <h4 style="text-align:center;font-size:18px;color:blueviolet">Nothing brings people together like food</h4>
 </section>
 
 <!-- Categories Section Ends Here -->
@@ -308,7 +333,10 @@ if (isset($_SESSION['notify'])) {
 <!-- fOOD MEnu Section Starts Here -->
 <section class="food-menu">
     <div class="container">
-        <h2 class="text-center">Food Menu</h2>
+        <div class="header-main">
+            <img src="images/icon.png" alt="" srcset="">
+            <h2 class="text-center" style="margin: 10px;color: blueviolet;">Food Menu</h2>
+        </div>
 
 
 
@@ -340,7 +368,7 @@ if (isset($_SESSION['notify'])) {
                             echo "<div class='error'>Image Not Available</div>";
                         } else {
                         ?>
-                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" class="img-responsive img-curve" style="border-radius: 50%;width:120px;height: 120px;box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 100px 0px;position:absolute;margin-top:-40px;margin-left :40px;">
+                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>">
 
                         <?php
 
@@ -350,12 +378,16 @@ if (isset($_SESSION['notify'])) {
                     </div>
                     <div class="food-menu-desc">
                         <h4><?php echo $title ?></h4>
-                        <br />
-                        <p class="food-price">Rs. <?php echo $price; ?></p>
-                        <br />
+                        
                         <p class="food-detail">
                             <?php echo $description; ?>
                         </p>
+                        
+                        <p class="food-price">Rs. <?php echo $price; ?></p>
+                        
+
+
+
                         <br />
 
 
@@ -467,45 +499,42 @@ if (isset($_SESSION['notify'])) {
 <br />
 <br />
 
-<div class="chefs" id="chefs">
-    <div class="content">
-        <div class="info">
-            <h2>Cooked by the
-                Best chefs in the
-                World</h2>
-            <p>We present the best chefs to cook your food to make
-                the food taste extraordinary</p>
-            <div class="check-circle" style="display: flex;flex-wrap:wrap;width:700px">
-                <ul>
-                    <li>A guarenteed delicious meal</li>
-                    <li>Food is guarenteed hygenic</li>
-                    <li>Cooked quickly</li>
-                    <li>Delivery on time</li>
-                </ul>
-
-
-
-
-            </div>
-        </div>
-        <div class="image">
-            <img src="./images/Chef.gif" alt="" srcset="">
-        </div>
-    </div>
-</div>
-
+<!-- <div class="chefs" id="chefs"> -->
+<!-- <div class="content"> -->
+<!-- <div class="info"> -->
+<!-- <h2>Cooked by the -->
+<!-- Best chefs </h2> -->
+<!-- <p>We present the best chefs to cook your food to make -->
+<!-- the food taste extraordinary</p> -->
+<!-- <div class="check-circle" style="display: flex;flex-wrap:wrap;width:700px"> -->
+<!-- <ul> -->
+<!-- <li><i class="far fa-check-square" style="color: white;margin:0px 5px"></i>A guarenteed delicious meal</li> -->
+<!-- <li><i class="far fa-check-square" style="color: white;margin:0px 5px"></i>Food is guarenteed hygenic</li> -->
+<!-- <li><i class="far fa-check-square" style="color: white;margin:0px 5px"></i>Cooked quickly</li> -->
+<!-- <li><i class="far fa-check-square" style="color: white;margin:0px 5px"></i>Delivery on time</li> -->
+<!-- </ul> -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class="image"> -->
+<!-- <img src="" alt="" srcset=""> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
 <!-- <br /> -->
 <!-- <br /> -->
 <!-- <br /> -->
 <!-- <br /> -->
-<br />
-<br />
-<br />
-<br />
-<br />
+<!-- <br /> -->
+<!-- <br /> -->
+<!-- <br /> -->
+<!-- <br /> -->
+
 
 <div class="review-section" id="review">
-    <h1 style="color: black;text-align:center">Reviews </h1>
 
 
 
@@ -518,46 +547,62 @@ if (isset($_SESSION['notify'])) {
 
 
 
-    <br />
-    <br />
-    <br />
+
+
+    <form action="" method="POST" style="margin: 20px;" style=" background-image: linear-gradient(120deg,black,rgb(0, 17, 63));">
 
 
 
-    <form action="" method="POST" style="margin: 20px;">
-
-
-
-        <h2 style="color: black;">Add review <i class="fas fa-comments"></i> </h2>
+        <h2 style="color: white;">Add review <i class="fas fa-comments"></i> </h2>
 
         <div class="review-content">
             <div class="content" style="width:400px;padding:20px;color:black">
-                <div class="name" style="margin: 10px 0px;">
-                    <h4>Full name</h4>
-                    <input type="text" name="full_name" placeholder="Enter full name" value="" style="width: 350px;height:40px" value="" required><?php $name; ?>
-                </div>
 
-                <div class="name" style="margin: 10px 0px;">
-                    <h4>Email</h4>
-                    <input type="email" name="email" placeholder="Email" value="" style="width: 350px;height:40px" required>
-                </div>
+                <div class="review-content-content">
+                    <div class="name" style="margin: 10px 0px;">
+                        <h4>Full name</h4>
+                        <input type="text" name="full_name" placeholder="Enter full name" value="" style="width: 350px;height:40px" value="" required><?php $name; ?>
+                    </div>
+
+                    <div class="name" style="margin: 10px 0px;">
+                        <h4>Email</h4>
+                        <input type="email" name="email" placeholder="Email" value="" style="width: 350px;height:40px" required>
+                    </div>
 
 
-                <div class="comment" style="margin: 10px 0px;">
-                    <h4>Comment</h4>
-                    <textarea type="text" name="comment" id="" cols="52" rows="5" value="" required></textarea>
+                    <div class="comment" style="margin: 10px 0px;">
+                        <h4>Comment</h4>
+                        <textarea type="text" name="comment" id="" cols="52" rows="5" value="" required></textarea>
+                    </div>
+                    <button type="submit" name="submit" style="margin: 10px 0px;background-color: orange;padding:10px;color:white;border:none;outline:none;cursor:pointer">Add review</button>
+
+
+
                 </div>
-                <button type="submit" name="submit" style="margin: 10px 0px;background-color: orange;padding:10px;color:white;border:none;outline:none;cursor:pointer">Add review</button>
 
             </div>
             <!-- <img src="" alt="" srcset="" width="300px" height="300px" style="margin-left: 30px;"> -->
         </div>
+
+
+
+
     </form>
+    <div class="para-review">
+        <h5 style="font-family: 'Merienda', cursive;color:white">Count memories not calories. ...</h5>
+    </div>
 
 
 
 
 </div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <?php
 
@@ -589,15 +634,9 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <div class="content" style="display: flex;flex-direction:column;justify-content:center;align-items:center;flex-wrap:wrap;;padding:30px;">
 
-    <h2 style="color: black;margin:10px">What our customers say <img src="images/Conversation.gif" alt="" srcset="" width="100px" height="100px"> </h2>
+    <h2 style="color: black;margin:10px">What our customers say</h2>
     <div class="content-content" style="display: flex;flex-wrap:wrap;padding:20px;justify-content:center;align-items:center">
         <?php
 
@@ -620,10 +659,16 @@ if (isset($_POST['submit'])) {
                 <br />
                 <br />
                 <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
 
                 <div class="content-review-section">
 
-                    <div class="review-section" id="review-section" style="padding:10px;float:left;margin:10px; background-color: rgb(49, 49, 49);">
+                    <div class="review-section" id="review-section" style="padding:10px;float:left;margin:10px; " data-aos="fade-in">
 
                         <div class="image-name" style="display: flex;justify-content:left;align-items:left">
                             <i class="fas fa-user-circle" style="font-size:30px;color: white;"></i>
@@ -670,6 +715,7 @@ if (isset($_POST['submit'])) {
 
 
     </div>
+
 
 </div>
 </div>

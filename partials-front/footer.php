@@ -11,7 +11,7 @@
                     <p>Latare lay out pandharkawda-445303 , yawatmal , maharashtra , India</p>
                     <br/>
                     <p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4762.2154469788875!2d78.56024685274255!3d20.029459032056696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1636297937081!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4762.2154469788875!2d78.56024685274255!3d20.029459032056696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1636297937081!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
                     </p>
                 </div>
                 <div class="testinomy">
@@ -39,13 +39,13 @@
                 </div>
             </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        
+
+        <!-- <div class="footer-map"> -->
+            <!-- <p> -->
+                 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4762.2154469788875!2d78.56024685274255!3d20.029459032056696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1636297937081!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            <!-- </p> -->
+        <!-- </div> -->
         <h4 style="text-align: center;color:white">Connect with us</h4>
 
         <section class="social">

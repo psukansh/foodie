@@ -49,7 +49,7 @@
 			<div class="col-4 text-center">
 				<?php
 				$sql2 = "SELECT * FROM tbl_food";
-				$res2 = mysqli_query($conn, $sql);
+				$res2 = mysqli_query($conn, $sql2);
 				$count2 = mysqli_num_rows($res2);
 
 				?>
@@ -62,7 +62,7 @@
 			<div class="col-4 text-center">
 				<?php
 				$sql3 = "SELECT * FROM tbl_order";
-				$res3 = mysqli_query($conn, $sql);
+				$res3 = mysqli_query($conn, $sql3);
 				$count3 = mysqli_num_rows($res3);
 				?>
 				<h1><?php echo $count3; ?></h1>

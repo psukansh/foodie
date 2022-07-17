@@ -122,7 +122,7 @@ if (isset($_GET['food_id'])) {
 
 
 
-            $order_date = date('Y-m-d H:i:sa');
+            $order_date = date('Y-m-d');
 
             $status = "Ordered";
 

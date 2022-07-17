@@ -1,7 +1,7 @@
 <?php include('partials-front/menu.php')  ?>
 
 <form action="" method="POST" style="width: 1000px;height:400px;display:flex;justify-content:center;align-items:center;margin:auto">
-	<div class="content" style="background-image: linear-gradient(120deg,rgb(112, 72, 255) ,rgb(160, 125, 255));padding:40px;width:500px;height:300px;color:white">
+	<div class="content" style="background-color:white;padding:40px;width:500px;height:300px;color:white">
 
 		<?php
 

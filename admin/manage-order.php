@@ -34,8 +34,8 @@
 
 
 
-			<table class="tbl-full" style="background-color: rgb(0, 19, 41);color:white">
-				<tr style="background-color: white;color:black;padding:0px 10px">
+			<table class="tbl-full" >
+				<tr style="padding:0px 10px">
 					<th style="font-size: 13px;padding:3px;font-weight:bold">S.NO</th>
 					<th style="font-size: 13px;padding:3px;font-weight:bold;width:100px">Food</th>
 					<th style="font-size: 13px;padding:3px;font-weight:bold">Price</th>
